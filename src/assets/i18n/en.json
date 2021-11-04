@@ -1,0 +1,34 @@
+{
+  "title": "Service feedback for {{company}}",
+  "name": {
+    "label": "Name",
+    "placeholder": "Enter Name"
+  },
+  "gender": {
+    "label": "Gender",
+    "select": "Select gender",
+    "options": {
+      "male": "Male",
+      "female": "Female",
+      "other": "Other"
+    }
+  },
+  "comment": {
+    "label": "Comment",
+    "placeholder": "Enter Comment"
+  },
+  "rating": {
+    "label": "Rate our customer service: ",
+    "options": {
+      "excellent": "Excellent",
+      "good": "Good",
+      "bad": "Bad"
+    }
+  },
+  "submit": {
+    "label": "Submit"
+  },
+  "commonErrorMessage": "This is a required field.",
+  "successfullSubmitMessage": "Thanks for your valuable feedback!!!\nThe feedback has been submitted successfully.",
+  "copyright": "All rights reserved. {{currentYear}} {{company}}"
+}

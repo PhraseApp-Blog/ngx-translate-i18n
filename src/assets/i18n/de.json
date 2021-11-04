@@ -1,0 +1,34 @@
+{
+  "title": "Service-Feedback für {{company}}",
+  "name": {
+    "label": "Namen",
+    "placeholder": "Name eingeben"
+  },
+  "gender": {
+    "label": "Geschlecht",
+    "select": "Wähle Geschlecht",
+    "options": {
+      "male": "Männlich",
+      "female": "Weiblich",
+      "other": "Andere"
+    }
+  },
+  "comment": {
+    "label": "Kommentar",
+    "placeholder": "Kommentar eingeben"
+  },
+  "rating": {
+    "label": "Bewerten Sie unseren Kundenservice:",
+    "options": {
+      "excellent": "Ausgezeichnet",
+      "good": "Gute",
+      "bad": "Schlecht"
+    }
+  },
+  "submit": {
+    "label": "Senden"
+  },
+  "commonErrorMessage": "Dies ist ein Pflichtfeld.",
+  "successfullSubmitMessage": "Vielen Dank für Ihr wertvolles Feedback!!!\nDas Feedback wurde erfolgreich übermittelt.",
+  "copyright": "Alle Rechte vorbehalten. {{currentYear}} {{company}}"
+}

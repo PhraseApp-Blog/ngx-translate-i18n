@@ -1,0 +1,91 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mx-auto m-2 p-4">
+      <div class="card">
+        <div class="card-header">
+          <h3>{{'title'| translate:titleParam }}</h3>
+        </div>
+        <div class="card-body">
+          <form #feedbackForm="ngForm" (ngSubmit)="feedbackForm.form.valid && saveFeedback()" novalidate>
+            <div class="form-group">
+              <label>{{'name.label'|translate}}</label>
+              <input type="text" class="form-control" [placeholder]="'name.placeholder' | translate"
+                [(ngModel)]="customerFeedback.name" name="name" #name="ngModel" required>
+              <span translate class="text-danger"
+                *ngIf="(name.touched || feedbackForm.submitted) && name.errors?.required">
+                commonErrorMessage
+              </span>
+            </div>
+
+            <div class="form-group">
+              <label>{{'gender.label'|translate}}</label>
+              <select class="form-control" data-val="true" [(ngModel)]="customerFeedback.gender" name="gender"
+                #gender="ngModel" required>
+                <option value="">{{'gender.select' | translate}}</option>
+                <ng-container *ngFor="let gender of genderList">
+                  <option value="{{'gender.options.'+gender | translate }}">{{'gender.options.'+gender | translate }}
+                  </option>
+                </ng-container>
+              </select>
+              <span translate class="text-danger"
+                *ngIf="(gender.touched || feedbackForm.submitted)&& gender.errors?.required">
+                commonErrorMessage
+              </span>
+            </div>
+
+            <div class="form-group">
+              <label>{{'comment.label'|translate}}</label>
+              <textarea type="text" class="form-control" [placeholder]="'comment.placeholder' | translate"
+                [(ngModel)]="customerFeedback.comment" name="comment" #comment="ngModel" required></textarea>
+              <span translate class="text-danger"
+                *ngIf="(comment.touched || feedbackForm.submitted)&& comment.errors?.required">
+                commonErrorMessage
+              </span>
+            </div>
+
+            <div class="form-group">
+              <label>{{'rating.label'|translate}}</label>
+              <div class="">
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input id="excellent" type="radio" class="custom-control-input" value="excellent" name="rating"
+                    [(ngModel)]="customerFeedback.rating" #rating="ngModel" required>
+                  <label class="custom-control-label" for="excellent">{{'rating.options.excellent' | translate }}
+                  </label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input id="good" type="radio" class="custom-control-input" value="good" name="rating"
+                    [(ngModel)]="customerFeedback.rating" #rating="ngModel" required>
+                  <label class="custom-control-label" for="good">{{'rating.options.good' | translate }}</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input id="bad" type="radio" class="custom-control-input" value="bad" name="rating"
+                    [(ngModel)]="customerFeedback.rating" #rating="ngModel" required>
+                  <label class="custom-control-label" for="bad">{{'rating.options.bad' | translate }}</label>
+                </div>
+              </div>
+              <span translate class="text-danger"
+                *ngIf="(rating.touched || feedbackForm.submitted)&& rating.errors?.required">
+                commonErrorMessage
+              </span>
+            </div>
+
+            <div class="row form-group">
+              <div class="col d-flex justify-content-end">
+                <button translate type="submit" class="btn btn-success"> {{'submit.label'}}</button>
+              </div>
+            </div>
+          </form>
+
+          <div class="row">
+            <div class="col">
+              <p>&copy;
+                <small translate [translateParams]="copyrightInfoParam" class="text-muted">copyright
+                </small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
