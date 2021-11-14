@@ -8,8 +8,7 @@ import { Feedback } from '../models/feedback';
   styleUrls: ['./feedback.component.scss'],
 })
 export class FeedbackComponent {
-
-  companyName = 'Phrase'
+  companyName = 'Phrase';
   genderList = ['male', 'female', 'other'];
 
   customerFeedback = new Feedback();
@@ -20,14 +19,15 @@ export class FeedbackComponent {
     this.titleParam = { company: this.companyName };
     this.copyrightInfoParam = {
       currentYear: new Date().getFullYear(),
-      company: this.companyName
-    }
+      company: this.companyName,
+    };
   }
 
   saveFeedback() {
-    this.translate.get('successfullSubmitMessage')
-      .subscribe((succesMessage: string) => {
-        alert(succesMessage);
+    this.translate
+      .get('successfulSubmitMessage')
+      .subscribe((successMessage: string) => {
+        alert(successMessage);
       });
     console.table(this.customerFeedback);
   }

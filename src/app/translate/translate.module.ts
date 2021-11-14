@@ -15,14 +15,13 @@ export function HttpLoaderFactory(http: HttpClient) {
     HttpClientModule,
     TranslateModule.forRoot({
       defaultLanguage: 'en',
-      useDefaultLang: true,
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      }
-    })
+        deps: [HttpClient],
+      },
+    }),
   ],
-  exports: [TranslateModule]
+  exports: [TranslateModule],
 })
-export class NgxTranslateModule { }
+export class NgxTranslateModule {}

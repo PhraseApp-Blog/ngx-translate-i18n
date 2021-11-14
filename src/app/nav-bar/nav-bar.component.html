@@ -2,13 +2,23 @@
   <a class="navbar-brand">Phrase</a>
   <span class="spacer"></span>
   <div class="btn-group" dropdown>
-    <button id="button-animated" dropdownToggle type="button" class="btn btn-link dropdown-toggle"
-      aria-controls="dropdown-animated">
+    <button
+      id="button-animated"
+      dropdownToggle
+      type="button"
+      class="btn btn-link dropdown-toggle"
+      aria-controls="dropdown-animated"
+    >
       <i class="fa fa-globe" aria-hidden="true"></i> {{ siteLanguage }}
       <span class="caret"></span>
     </button>
-    <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu"
-      aria-labelledby="button-animated">
+    <ul
+      id="dropdown-animated"
+      *dropdownMenu
+      class="dropdown-menu dropdown-menu-right"
+      role="menu"
+      aria-labelledby="button-animated"
+    >
       <ng-container *ngFor="let language of languageList">
         <li role="menuitem">
           <a class="dropdown-item" (click)="changeSiteLanguage(language.code)">

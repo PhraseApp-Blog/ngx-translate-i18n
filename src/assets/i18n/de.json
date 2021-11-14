@@ -29,6 +29,6 @@
     "label": "Senden"
   },
   "commonErrorMessage": "Dies ist ein Pflichtfeld.",
-  "successfullSubmitMessage": "Vielen Dank für Ihr wertvolles Feedback!!!\nDas Feedback wurde erfolgreich übermittelt.",
+  "successfulSubmitMessage": "Vielen Dank für Ihr wertvolles Feedback!!!\nDas Feedback wurde erfolgreich übermittelt.",
   "copyright": "Alle Rechte vorbehalten. {{currentYear}} {{company}}"
 }

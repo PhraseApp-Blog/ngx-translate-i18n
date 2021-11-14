@@ -29,6 +29,6 @@
     "label": "Submit"
   },
   "commonErrorMessage": "This is a required field.",
-  "successfullSubmitMessage": "Thanks for your valuable feedback!!!\nThe feedback has been submitted successfully.",
+  "successfulSubmitMessage": "Thanks for your valuable feedback!!!\nThe feedback has been submitted successfully.",
   "copyright": "All rights reserved. {{currentYear}} {{company}}"
 }
