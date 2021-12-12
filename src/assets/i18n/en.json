@@ -1,5 +1,5 @@
 {
-  "title": "Service feedback for {{company}}",
+  "title": "Service feedback for {company}",
   "name": {
     "label": "Name",
     "placeholder": "Enter Name"
@@ -28,7 +28,15 @@
   "submit": {
     "label": "Submit"
   },
-  "commonErrorMessage": "This is a required field.",
+  "requiredErrorMessage": "This is a required field.",
   "successfulSubmitMessage": "Thanks for your valuable feedback!!!\nThe feedback has been submitted successfully.",
-  "copyright": "All rights reserved. {{currentYear}} {{company}}"
+  "copyright": "All rights reserved. {currentYear} {company}",
+  "pluralization": {
+    "items": "You have selected {count, plural, =0{nothing} one{one} other{multiple}} {count, plural, =0{} one{item} other{items}}.",
+    "gender": "{gender, select, male{He is a} female{She is a} other{They are}} {gender}."
+  },
+  "aboutPhrase": "<h1>What is Phrase?</h1><p>Phrase is an all-in-one platform for scalable software localization and translation management. Be it web or mobile apps, Phrase enables you to translate any kind of software.</p>",
+  "CASESPECIFICKEY": "THE TRANSLATION KEY IS DEFINED AS {case}.",
+  "casespecifickey": "the translation key is defined as {case}.",
+  "Casespecifickey": "The Translation Key Is Defined As {case}."
 }

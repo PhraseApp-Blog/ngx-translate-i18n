@@ -1,5 +1,5 @@
 {
-  "title": "Service-Feedback für {{company}}",
+  "title": "Service-Feedback für {company}",
   "name": {
     "label": "Namen",
     "placeholder": "Name eingeben"
@@ -28,7 +28,15 @@
   "submit": {
     "label": "Senden"
   },
-  "commonErrorMessage": "Dies ist ein Pflichtfeld.",
+  "requiredErrorMessage": "Dies ist ein Pflichtfeld.",
   "successfulSubmitMessage": "Vielen Dank für Ihr wertvolles Feedback!!!\nDas Feedback wurde erfolgreich übermittelt.",
-  "copyright": "Alle Rechte vorbehalten. {{currentYear}} {{company}}"
+  "copyright": "Alle Rechte vorbehalten. {currentYear} {company}",
+  "pluralization": {
+    "items": "Du hast ausgewählt {count, plural, =0{nichts} one{eins} other{mehrere}} {count, plural, =0{} one{Artikel} other{Produkte}}.",
+    "gender": "{gender, select, male{er ist ein} female{Sie ist ein} other{Sie sind }} {gender}."
+  },
+  "aboutPhrase": "<h1>Was ist Phrase?</h1><p>Phrase ist eine All-in-One-Plattform für skalierbare Softwarelokalisierung und Übersetzungsmanagement. Sei es Web- oder mobile Apps, Phrase ermöglicht es Ihnen, jede Art von Software zu übersetzen.</p>",
+  "CASESPECIFICKEY": "DER ÜBERSETZUNGSSCHLÜSSEL IST ALS {case} DEFINIERT.",
+  "casespecifickey": "der Übersetzungsschlüssel ist als {case} definiert.",
+  "Casespecifickey": "Der Übersetzungsschlüssel ist als {case} definiert."
 }

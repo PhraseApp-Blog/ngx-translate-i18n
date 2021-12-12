@@ -1,5 +1,8 @@
 <nav class="navbar navbar-dark navbar-expand-lg">
-  <a class="navbar-brand">Phrase</a>
+  <a [routerLink]="['/']" class="navbar-brand">Phrase</a>
+  <button class="btn btn-link" [routerLink]="['/miscellaneous-example']">
+    Miscellaneous Example
+  </button>
   <span class="spacer"></span>
   <div class="btn-group" dropdown>
     <button

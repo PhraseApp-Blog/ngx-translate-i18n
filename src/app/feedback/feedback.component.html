@@ -30,7 +30,7 @@
                   name.errors?.required
                 "
               >
-                commonErrorMessage
+                requiredErrorMessage
               </span>
             </div>
 
@@ -59,7 +59,7 @@
                   gender.errors?.required
                 "
               >
-                commonErrorMessage
+                requiredErrorMessage
               </span>
             </div>
 
@@ -82,7 +82,7 @@
                   comment.errors?.required
                 "
               >
-                commonErrorMessage
+                requiredErrorMessage
               </span>
             </div>
 
@@ -143,7 +143,7 @@
                   rating.errors?.required
                 "
               >
-                commonErrorMessage
+                requiredErrorMessage
               </span>
             </div>
 
@@ -160,12 +160,14 @@
             <div class="col">
               <p>
                 &copy;
+                <!-- translation directive — key as a child  -->
                 <small
                   translate
                   [translateParams]="copyrightInfoParam"
                   class="text-muted"
                   >copyright
                 </small>
+                <br />
               </p>
             </div>
           </div>

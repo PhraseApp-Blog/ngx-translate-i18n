@@ -1,0 +1,48 @@
+<h2 class="display-4">Miscellaneous Examples</h2>
+
+<hr />
+<h3>Pluralization</h3>
+<br />
+<h5>Select Items</h5>
+<div class="row">
+  <div class="col-md-4">
+    <select [(ngModel)]="itemQuantity" class="form-control" data-val="true">
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+    </select>
+  </div>
+  <div class="col-md-4">
+    <strong translate [translateParams]="{ count: itemQuantity }"
+      >pluralization.items</strong
+    >
+  </div>
+</div>
+<br />
+<h5>Select Gender</h5>
+<div class="row">
+  <div class="col-md-4">
+    <select [(ngModel)]="selectedGender" class="form-control" data-val="true">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="others">Others</option>
+    </select>
+  </div>
+  <div class="col-md-4">
+    <strong>{{
+      "pluralization.gender" | translate: { gender: selectedGender }
+    }}</strong>
+  </div>
+</div>
+<hr />
+
+<h3>Bind to Raw HTML</h3>
+<br />
+<div [innerHTML]="'aboutPhrase' | translate"></div>
+<hr />
+
+<h3>Using the translate pipe with built-in pipes</h3>
+<br />
+<p>{{ caseSpecificKey | uppercase | translate: { case: "UPPERCASE" } }}</p>
+<p>{{ caseSpecificKey | lowercase | translate: { case: "lowercase" } }}</p>
+<p>{{ caseSpecificKey | titlecase | translate: { case: "Titlecase" } }}</p>

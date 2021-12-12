@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import {
+  DefaultLangChangeEvent,
+  LangChangeEvent,
+  TranslateService,
+  TranslationChangeEvent
+} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-nav-bar',
@@ -14,17 +19,34 @@ export class NavBarComponent {
     { code: 'de', label: 'Deutsch' },
   ];
 
-  constructor(private translate: TranslateService) {}
+  constructor(private translate: TranslateService) {
+    this.translate.onLangChange
+      .subscribe((event: LangChangeEvent) => {
+        console.log('onLangChange', event);
+      });
 
-  changeSiteLanguage(language: string): void {
-    this.translate.use(language);
+    this.translate.onTranslationChange
+      .subscribe((event: TranslationChangeEvent) => {
+        console.log('onTranslationChange', event);
+      });
 
+    this.translate.onDefaultLangChange
+      .subscribe((event: DefaultLangChangeEvent) => {
+        console.log('onDefaultLangChange', event);
+      });
+  }
+
+  changeSiteLanguage(localeCode: string): void {
     const selectedLanguage = this.languageList
-      .find((f) => f.code === language)
+      .find((language) => language.code === localeCode)
       ?.label.toString();
 
     if (selectedLanguage) {
       this.siteLanguage = selectedLanguage;
+      this.translate.use(localeCode);
     }
+
+    const currentLanguage = this.translate.currentLang;
+    console.log('currentLanguage', currentLanguage);
   }
 }
