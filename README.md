@@ -1,6 +1,6 @@
 # NgxTranslatePhrase
 
-This project accompanies the Deep Dive on Angular I18n with ngx-translate on The Phrase Blog: https://phrase.com/blog/posts/angular-i18n-ngx-translate/
+This project accompanies the [Deep Dive on Angular I18n with ngx-translate](https://phrase.com/blog/posts/angular-i18n-ngx-translate/) on The Phrase Blog.
 
 It was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.0.
 
